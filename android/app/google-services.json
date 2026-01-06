@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "584130821844",
+    "project_id": "notification-d66c6",
+    "storage_bucket": "notification-d66c6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584130821844:android:76d0303551fe40c9228541",
+        "android_client_info": {
+          "package_name": "com.anonymous.akademosmobileapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq6RFIdC6-l7YKJnLn9MeAFnPt39WongM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584130821844:android:1a78193c38d8f8f6228541",
+        "android_client_info": {
+          "package_name": "com.rnsetup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq6RFIdC6-l7YKJnLn9MeAFnPt39WongM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
