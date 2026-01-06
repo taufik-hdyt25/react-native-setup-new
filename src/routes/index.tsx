@@ -10,7 +10,7 @@ const MainRoute = () => {
       <Stack.Navigator>
         <Stack.Screen
           options={{
-            headerShown: true,
+            headerShown: false,
           }}
           name="Home"
           component={HomeScreen}

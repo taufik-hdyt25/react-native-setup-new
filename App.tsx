@@ -5,17 +5,20 @@
  * @format
  */
 
-import { StatusBar, useColorScheme } from 'react-native';
+import { StatusBar } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import MainRoute from './src/routes';
+import { PaperProvider } from 'react-native-paper';
 
 function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+  // const isDarkMode = useColorScheme() === 'dark';
 
   return (
     <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <MainRoute />
+      <PaperProvider>
+        <StatusBar />
+        <MainRoute />
+      </PaperProvider>
     </SafeAreaProvider>
   );
 }
