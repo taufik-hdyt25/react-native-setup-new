@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import { listenForegroundNotification } from '@/utils/notifications/foreground';
 import { useEffect } from 'react';
 import { StatusBar } from 'react-native';
@@ -15,6 +8,19 @@ import {
   initPushNotification,
   listenTokenRefresh,
 } from './src/utils/notifications/index';
+
+import { QueryClient } from '@tanstack/react-query';
+import { QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 1,
+      staleTime: 0,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 function App() {
   useEffect(() => {
@@ -29,10 +35,12 @@ function App() {
 
   return (
     <SafeAreaProvider>
-      <PaperProvider>
-        <StatusBar />
-        <MainRoute />
-      </PaperProvider>
+      <QueryClientProvider client={queryClient}>
+        <PaperProvider>
+          <StatusBar barStyle={'dark-content'} />
+          <MainRoute />
+        </PaperProvider>
+      </QueryClientProvider>
     </SafeAreaProvider>
   );
 }
